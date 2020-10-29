@@ -1,19 +1,15 @@
-fetch('https://private-e05942-courses22.apiary-mock.com/courses')
-    .then(
-        function(response) {
-            if (response.status !== 200) {
-                console.log('Looks like there was a problem. Status Code: ' + response.status);
-                return;
-            }
+let course_list = [];
+const container = document.getElementById('course-container');
+const url = 'https://private-e05942-courses22.apiary-mock.com/courses';
 
-            response.json().then(function(data) {
-                console.log(data);
-            });
+fetch(url)
+    .then((response) => response.json())
+    .then(data => {
+        course_list = data.message;
+        for (title in course_list) {
+            let li = document.createElement('li');
+            let node = document.createTextNode(title);
+            li.appendChild(node);
+            container.appendChild(li);
         }
-    )
-    .catch(function(err) {
-        console.log('Fetch Error :-S', err);
-    });
-
-
-
+    })
