@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Courses - CareerFoundry</title>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <nav class="main-nav">
+        <ul class="main-nav-ul">
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">How It Works</a></li>
+            <li><a href="#">Graduate Outcomes</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+    </nav>
+    <header class="header">
+        <h1>Build a career you love</h1>
+        <p>Become a UX designer, UI designer, web developer, or data analyst from scratch!</p>
+        <button><a href="#course-selection">Find the Right Course for You</a></button>
+    </header>
+    <main class="careerfoundry-courses">
+        <a id="course-selection"></a>
+        <div class="courses">
+            <div id="course-title">
+                <span></span>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Developed with ❤️ in Berlin by Laurel Wright</p>
+    </footer>
     <script src="courses.js"></script>
-</body>
+  </body>
 </html>
