@@ -1,3 +1,5 @@
+// Retrieve Course Details Based on User's Selection
+
 // Display CareerFoundry Courses
 const url = "https://private-e05942-courses22.apiary-mock.com/courses";
 
@@ -16,12 +18,12 @@ function fetchData() {
           return `<div class="course-info">
               <p>Title: ${course.title}</p>
               <p>Author: ${course.author}</p>
-              <button><a href="${course.url}">Learn More</a></button>
+              <a href="${course.url}">View Program</a>
             </div>`;
         })
         .join("");
       console.log(html);
-      document.querySelector("#app").insertAdjacentHTML("afterbegin", html);
+      document.querySelector("#courses").insertAdjacentHTML("afterbegin", html);
     })
     .catch((error) => {
       console.log(error);
