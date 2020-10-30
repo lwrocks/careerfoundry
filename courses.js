@@ -1,5 +1,6 @@
 // Retrieve Course Details Based on User's Selection
 
+
 // Display CareerFoundry Courses
 const url = "https://private-e05942-courses22.apiary-mock.com/courses";
 
